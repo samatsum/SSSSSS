@@ -2,8 +2,7 @@
 
 # Configuration
 COMPOSE = docker compose -f srcs/docker-compose.yml
-VOLUME = /home/hhagiwar/data
-# VOLUME = /Users/hiro/Documents/42/inception-42/srcs/volumes/
+VOLUME = /home/samatsum/InceptionData
 
 # Primary Control Targets
 # -----------------------

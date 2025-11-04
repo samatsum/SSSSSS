@@ -1,4 +1,4 @@
-FROM debian:bullseye
+FROM debian:bookworm
 
 EXPOSE 443
 
@@ -6,8 +6,8 @@ RUN apt update && apt upgrade -y && apt install -y \
     nginx \
     openssl
 
-COPY conf/default /etc/nginx/sites-available/.
-COPY tools/script.sh /script.sh
+COPY default /etc/nginx/sites-available/.
+COPY script.sh /script.sh
 
 ARG CERT_FOLDER="/etc/nginx/cert"
 ARG CERT="/etc/nginx/cert/server.crt"

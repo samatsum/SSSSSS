@@ -10,4 +10,4 @@ chmod +x wp-cli.phar
 
 echo "127.0.0.1 ${DOMAIN_NAME}" >> /etc/hosts
 
-php-fpm7.2 -F
+php-fpm8.2 -F
