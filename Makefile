@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: hhagiwar <hhagiwar@tokyo.42.school>        +#+  +:+       +#+         #
+#    By: samatsum <samatsum@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/26 20:52:27 by hhagiwar          #+#    #+#              #
-#    Updated: 2025/02/23 06:12:40 by hhagiwar         ###   ########.fr        #
+#    Updated: 2025/11/04 19:35:41 by samatsum         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,13 +26,9 @@ all : up
 up :
 	@mkdir -p $(VOLUME)/mariadb
 	@mkdir -p $(VOLUME)/wordpress
-	@mkdir -p $(VOLUME)/prometheus
-# @mkdir -p $(VOLUME)/grafana
 	@chmod 755 $(VOLUME)
 	@chmod 755 $(VOLUME)/wordpress
 	@chmod 755 $(VOLUME)/mariadb
-	@chmod 755 $(VOLUME)/prometheus
-# @chmod 777 $(VOLUME)/grafana
 	@$(COMPOSE) build --no-cache
 	@$(COMPOSE) up --build
 
