@@ -77,20 +77,6 @@ server {
     #     proxy_set_header Host $http_host;
     #     proxy_pass http://grafana:3000/;
     # }
-
-    # Prometheus
-    location /prometheus/ {
-        proxy_set_header Host $http_host;
-        proxy_pass http://prometheus:9090/;
-    }
-
-    # endpoint for metrics
-    location /metrics {
-        proxy_pass http://wordpress:9000/status;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-    }
-
 	# pass PHP scripts to FastCGI server
 	#
     location ~ \.php$ {
