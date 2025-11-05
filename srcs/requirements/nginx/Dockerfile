@@ -9,6 +9,8 @@ RUN apt update && apt upgrade -y && apt install -y \
 COPY default /etc/nginx/sites-available/.
 COPY script.sh /script.sh
 
+RUN rm -f /etc/nginx/sites-enabled/default
+
 ARG CERT_FOLDER="/etc/nginx/cert"
 ARG CERT="/etc/nginx/cert/server.crt"
 ARG CERT_KEY="/etc/nginx/cert/server.key"
